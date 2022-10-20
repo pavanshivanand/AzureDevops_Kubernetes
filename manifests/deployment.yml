@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: pavanshivanandazuredevopskubernetes 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pavanshivanandazuredevopskubernetes
+  template:
+    metadata:
+      labels:
+        app: pavanshivanandazuredevopskubernetes 
+    spec:
+      containers:
+        - name: pavanshivanandazuredevopskubernetes 
+          image: azuredevopskubernetesregistry.azurecr.io/pavanshivanandazuredevopskubernetes
+          ports:
+          - containerPort: 8000
